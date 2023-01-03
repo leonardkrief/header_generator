@@ -1,4 +1,4 @@
-#include "../include/headers_gen.h"
+#include "prototypes.h"
 
 size_t	ft_strlen_gnl(const char *s)
 {

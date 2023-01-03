@@ -1,5 +1,7 @@
 SRCS		=	srcs/get_next_line.c \
-				srcs/utils.c \
+				srcs/help.c \
+				srcs/libft.c \
+				srcs/put_file_to.c \
 				srcs/main.c
 
 OBJS		= $(SRCS:.c=.o)
@@ -8,7 +10,7 @@ PROTOTYPES	=	prototypes
 
 CC			=	cc
 CFLAGS		=	-Wall -Wextra -Werror -g3
-INCLUDE		=	-I include
+INCLUDE		=	-Iinclude
 RM			=	rm -rf
 
 ${PROTOTYPES}:	${OBJS}
