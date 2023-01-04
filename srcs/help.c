@@ -6,7 +6,7 @@ void	print_help(int headers)
 	ft_putstr_fd(headers, "\t#prototypes generator\n");
 	ft_putstr_fd(headers, "\tmake_prototypes() {make re -C ~/path/to/prototypes_generator_directory}\n");
 	ft_putstr_fd(headers, "\tprototypes() {~/path/to/prototypes_executable $@}\n\n");
-	ft_putstr_fd(headers, "##############################################\n");
-	ft_putstr_fd(headers, "# Léonard KRIEF        leonardkrief@yahoo.fr #\n");
-	ft_putstr_fd(headers, "##############################################\n");
+	ft_putstr_fd(headers, "#############################################\n");
+	ft_putstr_fd(headers, "# Léonard KRIEF        lkrief@student.42.fr #\n");
+	ft_putstr_fd(headers, "#############################################\n");
 }
