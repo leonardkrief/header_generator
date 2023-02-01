@@ -16,8 +16,8 @@
 # define MAX_FILENAME_SIZE 1024
 # define HELP "Copy paste these lines to your shell_config file for easier use\n\
 \t#prototypes generator\n\
-\tmake_prototypes() {make re -C ~/path/to/prototypes_generator_directory}\n\
-\tprototypes() {~/path/to/prototypes_executable $@}\n\n\
+\tmake_ptt() {make re -C ~/path/to/prototypes_generator_directory}\n\
+\tptt() {~/path/to/prototypes_executable $@}\n\n\
 #############################################\n\
 # Léonard KRIEF        lkrief@student.42.fr #\n\
 #############################################\n"
@@ -30,15 +30,6 @@ char		*ft_strjoin_gnl(char const *res, char const *buff);
 void		aux_gnl(char **res, char *buff);
 char		*one_line_gnl(char *buff, int fd);
 char		*get_next_line(int fd);
-
-// help.c
-void		print_help(int headers);
-
-// libft.c
-int			ft_putstr_fd(int fd, char *str);
-int			ft_strncmp(const char *s1, const char *s2, size_t n);
-char		*ft_strjoin(char const *s1, char const *s2);
-char		*ft_strrchr(const char *s, int c);
 
 // put_file_to.c
 void		put_file_to(int fd, int headers);
