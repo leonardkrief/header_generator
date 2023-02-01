@@ -10,7 +10,7 @@ void	put_file_to(int fd, int headers)
 	s2 = get_next_line(fd);
 	while (s2 != NULL)
 	{
-		while (s2 != NULL && (ft_strncmp(s2, "{\n", 3) != 0))
+		while (s2 != NULL && (strncmp(s2, "{\n", 3) != 0))
 		{
 			free(s1);
 			s1 = s2;
@@ -21,9 +21,9 @@ void	put_file_to(int fd, int headers)
 		{
 			while (s1[i] && s1[i] != '\n')
 				write(headers, &s1[i++], 1);
-			ft_putstr_fd(headers, ";\n");
+			dprintf(headers, ";\n");
 		}
-		while (s2 != NULL && (ft_strncmp(s2, "}\n", 3) != 0))
+		while (s2 != NULL && (strncmp(s2, "}\n", 3) != 0))
 		{
 			free(s1);
 			s1 = s2;
@@ -32,5 +32,5 @@ void	put_file_to(int fd, int headers)
 	}
 	if (s1)
 		free(s1);
-	ft_putstr_fd(headers, "\n");
+	dprintf(headers, "\n");
 }
