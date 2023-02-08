@@ -14,7 +14,7 @@ OBJS_NAMES		=	${SRCS_NAMES:.c=.o}
 DEPS			=	${SRCS_NAMES:.c=.d}
 
 CC			=		cc
-CFLAGS		=		-Wall -Wextra -Werror -g3
+CFLAGS		=		-Wall -Wextra -Werror
 CDFLAGS		=		-MMD -MP
 INCLUDE		=		-Iinclude
 RM			=		rm -rf
@@ -30,7 +30,6 @@ ${OBJS} :	${DIR_OBJS}/%.o : ${DIR_SRCS}/%.c
 ${DIR_OBJS}:
 				mkdir -p ${DIR_OBJS}
 
-
 clean:
 				${RM} ${DIR_OBJS}
 				${RM} ${DEPS}
@@ -40,5 +39,9 @@ fclean:		clean
 				${RM} ${NAME}
 
 re:			fclean all
+
+d:			CFLAGS += -g3
+d:			all
+red:		fclean d
 
 .PHONY:		all clean fclean re

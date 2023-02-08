@@ -17,7 +17,7 @@ void	put_file_to(int fd, int headers)
 			s2 = get_next_line(fd);
 		}
 		i = 0;
-		if (s1 && s2)
+		if (s1 && s2 && strncmp(s1, "static ", 7))
 		{
 			while (s1[i] && s1[i] != '\n')
 				write(headers, &s1[i++], 1);

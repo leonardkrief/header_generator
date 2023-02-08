@@ -1,5 +1,5 @@
-#ifndef HEADERS_GEN_H
-# define HEADERS_GEN_H
+#ifndef PROTOTYPES_H
+# define PROTOTYPES_H
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1000
